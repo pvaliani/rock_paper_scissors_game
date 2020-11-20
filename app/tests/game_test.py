@@ -30,19 +30,34 @@ class GameTest(unittest.TestCase):
     def test_game_is_a_draw(self):
         self.assertEqual(self.player_1.choice, self.player_2.choice)
 
-# - Tests whether paper has beaten rock in the game - define two players with paper and rock choices, respectively and create a new game instance with the new values of player
+# - Tests whether paper has beaten rock in the game - define two players with paper and rock choices, respectively and create a new game instance with the new values of player. Test that the values for paper and rock match each respective player choice. Test that Player 1 is the winner based on paper beating rock in the game.
 
     def test_paper_beats_rock(self):
         self.player_1 = Player("Player 1", "Paper")
         self.player_2 = Player("Player 2", "Rock")
         self.game = Game(self.player_1, self.player_2)
-
-# - Test that the values for paper and rock match each respective player choice
-
         self.assertEqual("Paper", self.player_1.choice)
         self.assertEqual("Rock", self.player_2.choice)
-        
-# - Test that Player 1 is the winner based on paper beating rock in the game
-
         self.assertEqual("Player 1", self.game.play_game(self.player_1, self.player_2))
+
+# - Tests as above but with rock beating scissors instead
+
+    def test_rock_beats_scissors(self):
+        self.player_1 = Player("Player 1", "Rock")
+        self.player_2 = Player("Player 2", "Scissors")
+        self.game = Game(self.player_1, self.player_2)
+        self.assertEqual("Rock", self.player_1.choice)
+        self.assertEqual("Scissors", self.player_2.choice)
+        self.assertEqual("Player 1", self.game.play_game(self.player_1, self.player_2))
+
+# - Tests as above but with scissors beating paper
+
+    def test_scissors_beats_paper(self):
+        self.player_1 = Player("Player 1", "Scissors")
+        self.player_2 = Player("Player 2", "Paper")
+        self.game = Game(self.player_1, self.player_2)
+        self.assertEqual("Scissors", self.player_1.choice)
+        self.assertEqual("Paper", self.player_2.choice)
+        self.assertEqual("Player 1", self.game.play_game(self.player_1, self.player_2))
+
         

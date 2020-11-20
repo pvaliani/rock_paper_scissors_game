@@ -10,11 +10,9 @@ class Game():
 
     # - The class will take in two object instances of Player
 
-
     def __init__(self, player_1, player_2):
         self.player_1 = player_1
         self.player_2 = player_2
-        
 
 
     def play_game(self, player_1, player_2):

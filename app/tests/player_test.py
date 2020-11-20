@@ -16,12 +16,12 @@ class PlayerTest(unittest.TestCase):
 
         self.player_1 = Player("Pedram Valiani", "Scissors")
 
-# - Test that the player has a name based on player_1
+# - Test that the player has a name based on player_1 - point to the name attribute and compare
 
     def test_player_has_name(self):
         self.assertEqual(self.player_1.name, "Pedram Valiani")
 
-# - Test that the player has a choice based on player_1
+# - Test that the player has a choice based on player_1 - point to the choice attribute and compare
 
     def test_player_has_choice(self):
         self.assertEqual(self.player_1.choice, "Scissors")

@@ -19,4 +19,5 @@ class GameTest(unittest.TestCase):
         self.assertEqual("Rock vs Scissors", game_choices)
 
     def test_game_is_a_draw(self):
-        pass
+        self.player_2 = Player("Player 2", "Rock")
+        self.assertEqual(self.player_1.choice, self.player_2.choice)

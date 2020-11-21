@@ -1,12 +1,14 @@
 <html>
     <head>
       <title>{{ title }} - Rock Paper Scissors Game!</title>
-      <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}"
+      <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+      <img src={{ url_for('static', filename='RPS.jpg') }}>
+      
     </head>
-    <body>
+    <body id="main-page">
         <header>
             <nav>
-                <h2>The Rock, Paper, Scissors Game!</h2>
+                <h2 id="base-header">The Rock, Paper, Scissors Game!</h2>
                 <!-- Adds nav bar buttons for the game website -->
                 <ul id="nav-bar"> 
                     <li><a href="/" class="nav-button"> Home Page </a></li>
@@ -22,5 +24,6 @@
 
         {% endblock %}
         <hr>
+        
     </body>
 </html>

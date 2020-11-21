@@ -1,6 +1,6 @@
 # - This is the controller for the Rock, Paper, Scissors game to work with Flask
 
-from flask import render_template, request, redirect
+from flask import render_template, request, redirect, url_for
 from app import app
 from app.models.game import Game
 from app.models.player import Player

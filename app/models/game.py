@@ -8,7 +8,7 @@ class Game():
 
     # - Initialise variables for the Game class 
 
-    # - The class will take in two object instances of Player
+    # - Initialise two variables player_1 and player_2 to be utilised by play_game using self as the reference
 
     def __init__(self, player_1, player_2):
         self.player_1 = player_1
@@ -19,7 +19,7 @@ class Game():
     
     # - The winner is determined based on the rules and player choices - can refactor this later
 
-    # - If player choices match then result = "None" i.e the game is a draw
+    # - If player choices match then result = "None" i.e the game is a draw - this could return "None" which produces a traceback on Flask because there is "nothing" to return
 
         if(self.player_1.choice == self.player_2.choice):
             return "Draw"

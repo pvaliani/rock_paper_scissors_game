@@ -40,7 +40,7 @@ class GameTest(unittest.TestCase):
         self.assertEqual("Rock", self.player_2.choice)
         self.assertEqual("Player 1", self.game.play_game())
 
-# - Tests as above but with rock beating scissors instead
+# - Tests as above but with rock beating scissors instead. The final test checks the value of "Player 1" against the result of self.game.play_game() which inacts the play_game() method on the current game. No argument is required in play_game() as the function will already implicitly receive the values of both players in order to return the winner
 
     def test_rock_beats_scissors(self):
         self.player_1 = Player("Player 1", "Rock")

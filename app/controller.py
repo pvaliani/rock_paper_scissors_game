@@ -12,7 +12,7 @@ def base():
 
 # - The get request handled by the base() function
 
-    return render_template('base.html', title='Rock Paper Scissors Game')
+    return render_template('base.html')
     
 # - The get request which matches the players choices to return the result of the game. If the user inputs their choices in the browser as /rock/scissors for example, then the result will be returned in the browser as a string
 
@@ -25,3 +25,17 @@ def play_the_game(choice_1, choice_2):
     return choice_1.title() + " " + choice_2.title() + " " + winner
 
 #---------------------------------- MVP --------------------------------------------------------
+
+@app.route('/about')
+def about():
+
+# - The get request handled by the base() function
+
+    return render_template('about.html')
+
+@app.route('/play_game')
+def play_game():
+
+# - The get request handled by the base() function
+
+    return render_template('play_game.html')

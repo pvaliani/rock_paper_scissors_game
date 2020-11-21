@@ -4,9 +4,20 @@
       <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}"
     </head>
     <body>
-        <ul>
-          <li><a href="/">Home</a></li>
-        </ul>
+        <header>
+            <nav>
+                <h2>The Rock, Paper, Scissors Game!</h2>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="play_game">Play Game</a></li>
+                    <li><a href="about">About</a></li>
+                </ul>
+                <p>Welcome! Please navigate using the links above and have fun.</p>
+            </nav>
+        </header>
+        {% block content %}
+
+        {% endblock %}
         <hr>
     </body>
 </html>

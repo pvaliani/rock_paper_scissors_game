@@ -22,8 +22,11 @@ def play_the_game(choice_1, choice_2):
     player_2 = Player("Player 2", choice_2)
     game = Game(player_1, player_2)
     winner = game.play_game()
-    # return "Player 1 chose: " + choice_1.title() + " " + " Player 2 chose: " + choice_2.title() + "    " + " So, the winner is..." + winner
     return render_template('result.html', winner = winner)
+
+
+# <----------------------------OPTIONAL WAY TO DISPLAY THE RESULT --- WORK ON THIS LATER--------------------->
+ # return "Player 1 chose: " + choice_1.title() + " " + " Player 2 chose: " + choice_2.title() + "    " + " So, the winner is..." + winner
 
 #---------------------------------- MVP --------------------------------------------------------
 

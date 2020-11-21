@@ -38,7 +38,7 @@ class GameTest(unittest.TestCase):
         self.game = Game(self.player_1, self.player_2)
         self.assertEqual("Paper", self.player_1.choice)
         self.assertEqual("Rock", self.player_2.choice)
-        self.assertEqual("Player 1", self.game.play_game(self.player_1, self.player_2))
+        self.assertEqual("Player 1", self.game.play_game())
 
 # - Tests as above but with rock beating scissors instead
 
@@ -48,7 +48,7 @@ class GameTest(unittest.TestCase):
         self.game = Game(self.player_1, self.player_2)
         self.assertEqual("Rock", self.player_1.choice)
         self.assertEqual("Scissors", self.player_2.choice)
-        self.assertEqual("Player 1", self.game.play_game(self.player_1, self.player_2))
+        self.assertEqual("Player 1", self.game.play_game())
 
 # - Tests as above but with scissors beating paper
 
@@ -58,6 +58,6 @@ class GameTest(unittest.TestCase):
         self.game = Game(self.player_1, self.player_2)
         self.assertEqual("Scissors", self.player_1.choice)
         self.assertEqual("Paper", self.player_2.choice)
-        self.assertEqual("Player 1", self.game.play_game(self.player_1, self.player_2))
+        self.assertEqual("Player 1", self.game.play_game())
 
         

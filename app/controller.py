@@ -26,16 +26,24 @@ def play_the_game(choice_1, choice_2):
 
 #---------------------------------- MVP --------------------------------------------------------
 
+@app.route('/welcome')
+def welcome():
+
+# - The get request handled by the welcome() function
+
+    return render_template('welcome.html')
+
+
 @app.route('/about')
 def about():
 
-# - The get request handled by the base() function
+# - The get request handled by the about() function
 
     return render_template('about.html')
 
 @app.route('/play_game')
 def play_game():
 
-# - The get request handled by the base() function
+# - The get request handled by the play_game() function
 
     return render_template('play_game.html')

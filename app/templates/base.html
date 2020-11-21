@@ -1,24 +1,23 @@
 <html>
     <head>
-      <title>{{ title }} - Rock Paper Scissors Game!</title>
+      <title>{{ title }} - Rock Paper Scissors Game</title>
       <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
     </head>
     <body id="main-page">
-        <header>
+        <!-- <header> -->
             <nav>
-                <h2 id="base-header">The Rock, Paper, Scissors Game!</h2>
+                <h2 id="base-header">The Rock, Paper, Scissors Game</h2>
                 <!-- Adds nav bar buttons for the game website -->
                 <ul id="nav-bar"> 
                     <li><a href="/" class="nav-button"> Home Page </a></li>
                     <li><a href="welcome" class="nav-button"> Welcome Page </a></li>
                     <li><a href="about" class="nav-button">About </a></li>
                     <li><a href="play_game" class="nav-button">Play Game</a></li>
-                    <li><a href="result" class="nav-button">Game Result</a></li>
-                    
+                    <li><a href="result" class="nav-button">Game Result</a></li>              
                 </ul>
             </nav>
-        </header>
-        <hr>
+        <!-- </header> -->
+        <!-- <hr> -->
         {% block content %}
 
         {% endblock %}

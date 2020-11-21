@@ -33,31 +33,31 @@ class GameTest(unittest.TestCase):
 # - Tests whether paper has beaten rock in the game - define two players with paper and rock choices, respectively and create a new game instance with the new values of player. Test that the values for paper and rock match each respective player choice. Test that Player 1 is the winner based on paper beating rock in the game.
 
     def test_paper_beats_rock(self):
-        self.player_1 = Player("Player 1", "Paper")
-        self.player_2 = Player("Player 2", "Rock")
+        self.player_1 = Player("player 1", "paper")
+        self.player_2 = Player("player 2", "rock")
         self.game = Game(self.player_1, self.player_2)
-        self.assertEqual("Paper", self.player_1.choice)
-        self.assertEqual("Rock", self.player_2.choice)
-        self.assertEqual("Player 1", self.game.play_game())
+        self.assertEqual("paper", self.player_1.choice)
+        self.assertEqual("rock", self.player_2.choice)
+        self.assertEqual("player 1", self.game.play_game())
 
 # - Tests as above but with rock beating scissors instead. The final test checks the value of "Player 1" against the result of self.game.play_game() which inacts the play_game() method on the current game. No argument is required in play_game() as the function will already implicitly receive the values of both players in order to return the winner
 
     def test_rock_beats_scissors(self):
-        self.player_1 = Player("Player 1", "Rock")
-        self.player_2 = Player("Player 2", "Scissors")
+        self.player_1 = Player("player 1", "rock")
+        self.player_2 = Player("player 2", "scissors")
         self.game = Game(self.player_1, self.player_2)
-        self.assertEqual("Rock", self.player_1.choice)
-        self.assertEqual("Scissors", self.player_2.choice)
-        self.assertEqual("Player 1", self.game.play_game())
+        self.assertEqual("rock", self.player_1.choice)
+        self.assertEqual("scissors", self.player_2.choice)
+        self.assertEqual("player 1", self.game.play_game())
 
 # - Tests as above but with scissors beating paper
 
     def test_scissors_beats_paper(self):
-        self.player_1 = Player("Player 1", "Scissors")
-        self.player_2 = Player("Player 2", "Paper")
+        self.player_1 = Player("player 1", "scissors")
+        self.player_2 = Player("player 2", "paper")
         self.game = Game(self.player_1, self.player_2)
-        self.assertEqual("Scissors", self.player_1.choice)
-        self.assertEqual("Paper", self.player_2.choice)
-        self.assertEqual("Player 1", self.game.play_game())
+        self.assertEqual("scissors", self.player_1.choice)
+        self.assertEqual("paper", self.player_2.choice)
+        self.assertEqual("player 1", self.game.play_game())
 
         

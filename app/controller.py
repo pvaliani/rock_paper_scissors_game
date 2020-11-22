@@ -10,7 +10,7 @@ from app.models.player import Player
 @app.route('/')
 def base():
 
-# - The get request handled by the base() function
+# - The get request handled by the base() function - If the home page is clicked then show the base page
 
     return render_template('base.html')
     
@@ -24,13 +24,12 @@ def play_the_game(choice_1, choice_2):
     winner = game.play_game()
     return render_template('result.html', winner = winner)
 
+# - The result page is created even if the game hasn't begun so that the user is aware they need to start a new game. This method returns a string to replace winner to let the player know the game has not started. 
 @app.route('/result')
 def result():
 
     return render_template('result.html', winner = ".....undecided as you need to play the game. Click the 'play game' option in the nav bar!")
 
-# <----------------------------OPTIONAL WAY TO DISPLAY THE RESULT --- WORK ON THIS LATER--------------------->
- # return "Player 1 chose: " + choice_1.title() + " " + " Player 2 chose: " + choice_2.title() + "    " + " So, the winner is..." + winner
 
 #---------------------------------- MVP --------------------------------------------------------
 

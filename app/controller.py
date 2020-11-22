@@ -22,7 +22,7 @@ def play_the_game(choice_1, choice_2):
     player_2 = Player("Player 2", choice_2)
     game = Game(player_1, player_2)
     winner = game.play_game()
-    return render_template('result.html', winner = winner)
+    return render_template('result.html', winner = winner, choice_1 = choice_1, choice_2 = choice_2)
 
 # - The result page is created even if the game hasn't begun so that the user is aware they need to start a new game. This method returns a string to replace winner to let the player know the game has not started. 
 @app.route('/result')

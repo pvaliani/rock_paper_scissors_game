@@ -48,9 +48,24 @@ def about():
 
     return render_template('about.html')
 
-@app.route('/play_game')
+@app.route('/rules')
 def play_game():
 
 # - The get request handled by the play_game() function
 
-    return render_template('play_game.html')
+    return render_template('rules.html')
+
+# - Create a play route to host the input form for the user to input their choice against the Computer
+@app.route('/play')
+def play():
+    return render_template('play.html', title='Rock, Paper, Scissors')
+
+# - Create a post request with the argument of 'select-choice' which takes the selected choice from the input form and processes it to the results. In effect the form "action" is linked to the post request path of "select-choice" to retrieve the data. Then the request argument for player one is the 2nd parameter request.form
+
+@app.route('/select-choice', methods=['POST'])
+def select_choice():
+    player_1 = Player( "Player 1", request.form['choice'] )
+    player_2 = Player( "Computer", "")
+    game = Game( player_1, player_2 )
+    winner = game.play_game()
+    return (render_template("result.html", winner=winner, choice_1=player_1.choice, choice_2=player_2.choice))

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="play-dropdown">
+    <article>
+        <h2>Select move.</h2>
+        <form action="/select-choice" method="post">
+            <label for="choice"></label>
+            <select name="choice" id="choice">
+                <option value="rock">Rock</option>
+                <option value="paper">Paper</option>
+                <option value="scissors">Scissors</option>
+            </select>
+            <input type="submit" value="Go">
+        </form>
+    </article>
+</section>
+{% endblock %}

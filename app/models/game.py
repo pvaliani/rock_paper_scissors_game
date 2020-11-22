@@ -4,6 +4,8 @@
 
 from app.models.player import *
 
+import random
+
 class Game():
 
     # - Initialise variables for the Game class 
@@ -16,6 +18,11 @@ class Game():
 
 
     def play_game(self):
+
+    # - If player 2's name is Computer and their choice selection is empty then set Computer's choice using the method below
+    
+        if self.player_2.name == "Computer" and self.player_2.choice == "":
+            self.player_2.choice = self.play_against_computer()
     
     # - The winner is determined based on the rules and player choices - can refactor this later
 
@@ -45,3 +52,16 @@ class Game():
             return self.player_1.name
         elif result == self.player_2.choice:
             return self.player_2.name
+
+    # - Play against the computer - the computers choice of RPS is weighted against a random integer between 1 and 3
+
+    def play_against_computer(self):
+        
+        computer_choice = random.randint( 1, 3 )
+        if computer_choice == 1:
+            choice = 'rock'
+        elif computer_choice == 2:
+            choice = 'paper'
+        else:
+            choice = 'scissors'
+        return choice

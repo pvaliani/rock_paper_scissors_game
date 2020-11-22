@@ -28,7 +28,7 @@ def play_the_game(choice_1, choice_2):
 @app.route('/result')
 def result():
 
-    return render_template('result.html', winner = ".....undecided as you need to play the game. Click the 'play game' option in the nav bar!")
+    return render_template('result.html', winner = ".....undecided as you need to play the game.")
 
 
 #---------------------------------- MVP --------------------------------------------------------

@@ -58,7 +58,7 @@
 
 #about-page {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 45px;
     font-weight: bold;
     text-align: center;
 }
@@ -85,9 +85,18 @@
 }
 
 #welcome-heading {
-    font-size: 100px;
+    font-size: 150px;
     font-weight: bold;
+    margin-top: 170px;
   
+}
+
+#learn-more {
+    margin-top: 60px;
+}
+
+#about-video {
+    margin-top: 40px;
 }
 
 #how-to-play  {
@@ -104,6 +113,7 @@ p {
 #results-header {
     font-weight: bold;
     font-size: 100px;
+    margin-top: 100px;
 }
 
 footer {
@@ -112,4 +122,8 @@ footer {
     font-weight: bold;
     text-align: center;
     padding: 30px;
+}
+
+#results-instructions{
+    margin-top: 80px;
 }

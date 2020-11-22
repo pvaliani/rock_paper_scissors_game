@@ -32,7 +32,7 @@
 #base-header {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    text-decoration: underline;
+    font-size: 30px;
 }
 
 #main-page {
@@ -44,6 +44,7 @@
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
+  
 }
 
 .RPS-img {
@@ -52,26 +53,63 @@
     margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
-    width: 80%;
+    width: 65%;
 }
 
 #about-page {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
+    font-size: 20px;
+    font-weight: bold;
     text-align: center;
 }
 
 #play-game-page {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    text-align: center;
+    font-size: 40px;
+    text-align: unset;
+
 }
 
 #results-page {
 
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
+    font-size: 30px;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 65%;
     
 
+}
+
+#welcome-heading {
+    font-size: 100px;
+    font-weight: bold;
+  
+}
+
+#how-to-play  {
+    font-size: 100px;
+    font-weight: bold;
+}
+
+p {
+     margin:0 
+    
+    }
+
+
+#results-header {
+    font-weight: bold;
+    font-size: 100px;
+}
+
+footer {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    padding: 30px;
 }

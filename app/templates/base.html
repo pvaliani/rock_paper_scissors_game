@@ -6,7 +6,7 @@
     <body id="main-page">
         <!-- <header> -->
             <nav>
-                <h2 id="base-header">The Rock, Paper, Scissors Game</h2>
+                <h2 id="base-header">Rock. Paper. Scissors.</h2>
                 <!-- Adds nav bar buttons for the game website -->
                 <ul id="nav-bar"> 
                     <li><a href="/" class="nav-button"> Home Page </a></li>
@@ -19,12 +19,11 @@
         <!-- </header> -->
         <!-- <hr> -->
         {% block content %}
-
-        {% endblock %}
         <img src={{ url_for('static', filename='RPS.jpeg') }} alt="RPS-logo" class="RPS-img">
+        {% endblock %}
         
-        <!-- <source src="{{ url_for('static', filename='test.mp3') }}" type="file/mpeg"> -->
-    
+        
 
     </body>
+    <footer> By Pedram Valiani </footer>
 </html>

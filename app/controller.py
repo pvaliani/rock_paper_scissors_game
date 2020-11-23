@@ -16,6 +16,8 @@ def base():
     
 # - The get request which matches the players choices to return the result of the game. If the user inputs their choices in the browser as /rock/scissors for example, then the result will be returned in the browser as a string
 
+# - **locals() - passes all local variables within a function and pass it in as a keyword argument. Can then call by exactly what its called in the method
+
 @app.route('/<choice_1>/<choice_2>')
 def play_the_game(choice_1, choice_2):
     player_1 = Player("Player 1", choice_1)
@@ -61,6 +63,8 @@ def play():
     return render_template('play.html', title='Rock, Paper, Scissors')
 
 # - Create a post request with the argument of 'select-choice' which takes the selected choice from the input form and processes it to the results. In effect the form "action" is linked to the post request path of "select-choice" to retrieve the data. Then the request argument for player one is the 2nd parameter request.form
+
+# - Again, could use **locals() on line 74 to pass all variables
 
 @app.route('/select-choice', methods=['POST'])
 def select_choice():

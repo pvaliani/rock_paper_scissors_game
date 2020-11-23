@@ -12,6 +12,8 @@ class Game():
 
     # - Initialise two variables player_1 and player_2 to be utilised by play_game using self as the reference
 
+    # - Don't need a constructor for players. Can just pass the players in as part of the game class
+
     def __init__(self, player_1, player_2):
         self.player_1 = player_1
         self.player_2 = player_2
@@ -20,7 +22,7 @@ class Game():
     def play_game(self):
 
     # - If player 2's name is Computer and their choice selection is empty then set Computer's choice using the method below
-    
+
         if self.player_2.name == "Computer" and self.player_2.choice == "":
             self.player_2.choice = self.play_against_computer()
     
